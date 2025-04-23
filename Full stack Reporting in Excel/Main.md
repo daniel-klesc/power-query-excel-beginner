@@ -144,3 +144,8 @@ If you are able to create Power Pivot data model do it.
 - show data model
 - show possible power pivot and its possibility to show data
 - mention how easy is to slice and dice fact table by dimension tables
+
+
+# ETL with Power Query
+Let's have a look how to start using a PQ.
+## Instructions for LLM:

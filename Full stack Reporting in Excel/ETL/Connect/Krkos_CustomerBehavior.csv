@@ -1,0 +1,4 @@
+CustomerID,VisitDate,Channel,PagesViewed,Purchased
+1001,2025-04-01,Online,5,True
+1002,2025-04-02,Retail,3,False
+1003,2025-04-03,Online,7,True
