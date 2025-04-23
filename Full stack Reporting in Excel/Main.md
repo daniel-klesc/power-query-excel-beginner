@@ -27,6 +27,25 @@ Exists two ways how to proceed.
 This process starts from data preparation, followed by data modelling and ends with visualization
 
 ### Extract & Transform & Load (ETL)
+Definition/Explanation
+ETL stands for Extract, Transform, Load – it’s a process used in data integration and reporting pipelines. Here’s what each part means:
+
+**Extract**:
+This step involves pulling data from one or more sources – such as databases, Excel files, APIs, or CSV exports. The goal is to collect raw data for further processing.
+
+**Transform**:
+This is where the data gets cleaned, shaped, and organized. It might include:
+- Filtering unnecessary rows/columns
+- Splitting or merging fields
+- Converting formats (e.g., text to dates)
+- Calculating new fields
+- Joining data from different sources
+
+Power Query in Excel is a tool specifically built for this step.
+
+**Load**:
+Finally, the transformed data is loaded into a destination – usually a database, data warehouse, or Excel data model (like Power Pivot), ready for analysis or reporting.
+
 For ETL we use Power Query.
 
 Why to use Power Query for ETL
@@ -104,7 +123,6 @@ Prepare this table for use as a **clean product dimension table** in reporting.
 | 102        | Jacket XPRO Red L  | Jackets  | Waterproof  | L    | Red    | 2022-10-01   |
 
 
-
 Btw Power Query is using(generates) in the background Power Query M formula language
 
 
@@ -121,3 +139,8 @@ The tables are going to be used directly in the data model. It means all the tra
 Generate all necesarry Power Query code as copy & paste.
 
 If you are able to create Power Pivot data model do it.
+
+##### Description of Showcase
+- show data model
+- show possible power pivot and its possibility to show data
+- mention how easy is to slice and dice fact table by dimension tables
