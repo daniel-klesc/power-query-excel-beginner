@@ -19,9 +19,35 @@ Use Power Query to import multiple CSV files with identical structure from a fol
 
 You now have a table that combines all 4 files, ready for reporting and analysis.
 
+## ✅ File Prerequisites (Very Important!)
+
+To ensure Power Query can successfully combine and transform multiple files from a folder, all the files must follow these basic rules:
+
+### 1. **Same Structure**
+- All files must have the **same columns**, in the **same order**.
+- Example:
+  - ✅ `ProductID, StoreID, Date, UnitsSold, Revenue` in every file
+  - ❌ One file has `Discount` column and others don’t
+
+### 2. **Same Format**
+- All files must be of the **same type** (e.g., all `.csv`, all `.xlsx`)
+- Avoid mixing formats in the same folder
+
+### 3. **Same Delimiter** (for text files like CSV)
+- If using CSVs, ensure all use the **same delimiter** (commas, tabs, etc.)
+
+### 4. **Headers Present (or consistently missing)**
+- Either all files must include column headers, or none should.
+- Power Query expects to promote the first row as header automatically
+
+### 5. **Avoid corrupted or partially filled files**
+- Files with missing columns, incorrect types, or empty rows can break the query logic
+
 # 🧠 What Happens Behind the Scenes: Power Query Folder Connector
 
 When you connect to a folder of files using **Power Query in Excel**, a set of helper queries is automatically created to streamline the process of **combining** and **transforming** those files.
+
+---
 
 ## ⚙️ What Power Query UI Generates
 
@@ -84,4 +110,8 @@ Yes. If Power Query picks a file that doesn't represent the full structure:
 | Where to apply transformations? | In **Transform Sample File** query |
 | Which file is used for example? | The **first file** (alphabetically, by default) |
 | Should I edit combined table directly? | ❌ No |
-| Can I change the sample file? | ✅ Yes
+| What if files differ? | ❌ Combination will fail |
+| Can I change the sample file? | ✅ Yes |
+| File structure must be? | ✅ Consistent in all files |
+
+By following these rules and understanding the structure, learners can automate powerful multi-file imports with confidence.
